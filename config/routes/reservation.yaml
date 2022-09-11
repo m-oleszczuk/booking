@@ -1,0 +1,42 @@
+reservations:
+  path: /v1/reservations
+  controller: App\Reservation\Application\Controller\Read\ReservationController::reservationsAction
+  methods: GET
+
+reservation:
+  path: /v1/reservations/{reservationId}
+  controller: App\Reservation\Application\Controller\Read\ReservationController::reservationAction
+  methods: GET
+  requirements:
+      reservationId: '\d+'
+
+reservation_holders:
+  path: /v1/reservations/holders
+  controller: App\Reservation\Application\Controller\Read\ReservationHolderController::reservationHoldersAction
+  methods: GET
+
+reservations_for_holders:
+  path: /v1/reservations/holders/{reservationHolderId}
+  controller: App\Reservation\Application\Controller\Read\ReservationHolderController::reservationsForHolderAction
+  methods: GET
+  requirements:
+    reservationHolderId: '\d+'
+
+create:
+  path: /v1/reservations
+  controller: App\Reservation\Application\Controller\Write\ReservationController::createAction
+  methods: POST
+
+update:
+  path: /v1/reservations/{reservationId}
+  controller: App\Reservation\Application\Controller\Write\ReservationController::updateAction
+  methods: POST
+  requirements:
+    reservationId: '\d+'
+
+delete:
+  path: /v1/reservations/{reservationId}
+  controller: App\Reservation\Application\Controller\Write\ReservationController::deleteAction
+  methods: DELETE
+  requirements:
+    reservationId: '\d+'

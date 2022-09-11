@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "7760cad6-baaa-433d-b1c4-ead7b8bd226c",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8177753"
+	},
+	"item": [
+		{
+			"name": "Get all reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/v1/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"v1",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/v1/reservations/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"v1",
+						"reservations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reservation holder list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/v1/reservations/holders",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"v1",
+						"reservations",
+						"holders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "confirmed",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-10-02 14:00:00",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-10-05 00:00:00",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Dave",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Grohl",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "+22777666555",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dave.grohl20@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "room_number",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/v1/reservations",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"v1",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "confirmed",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-10-20 14:00:00",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-10-21 00:00:00",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "John",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Doe",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "999888777",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "john.doe@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "room_number",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/v1/reservations/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"v1",
+						"reservations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/v1/reservations/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"v1",
+						"reservations",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
