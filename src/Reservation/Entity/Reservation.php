@@ -83,7 +83,7 @@ class Reservation
     }
 
     /**
-     * @param mixed $startDate
+     * @param DateTimeInterface $startDate
      */
     public function setStartDate(DateTimeInterface $startDate): void
     {
@@ -99,7 +99,7 @@ class Reservation
     }
 
     /**
-     * @param mixed $endDate
+     * @param DateTimeInterface $endDate
      */
     public function setEndDate(DateTimeInterface $endDate): void
     {
