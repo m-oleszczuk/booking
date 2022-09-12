@@ -6,12 +6,12 @@ namespace App\Reservation\Infrastructure\Model\Write;
 
 use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Domain\Service\BookingCostService;
-use App\Reservation\Entity\Holder;
-use App\Reservation\Entity\Reservation as ReservationEntity;
-use App\Reservation\Entity\Room;
+use App\Reservation\Domain\Entity\Holder;
+use App\Reservation\Domain\Entity\Reservation as ReservationEntity;
+use App\Reservation\Domain\Entity\Room;
 use App\Shared\Application\Exception\InfrastructureException;
 use App\Shared\Application\Exception\NotFoundException;
-use App\Reservation\Application\Model\Write\ReservationWriteInterface;
+use App\Reservation\Domain\Model\Write\ReservationWriteInterface;
 use DateTimeImmutable;
 use Doctrine\DBAL\Connection;
 use Doctrine\ORM\EntityManagerInterface;

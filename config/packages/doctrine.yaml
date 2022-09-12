@@ -26,15 +26,15 @@ doctrine:
                     Reservation:
                         is_bundle: false
                         type: annotation
-                        dir: '%kernel.project_dir%/src/Reservation/Entity'
+                        dir: '%kernel.project_dir%/src/Reservation/Domain/Entity'
                         prefix: App\Reservation\Entity
                     Holder:
                         is_bundle: false
                         type: annotation
-                        dir: '%kernel.project_dir%/src/Reservation/Entity'
+                        dir: '%kernel.project_dir%/src/Reservation/Domain/Entity'
                         prefix: App\Reservation\Entity
                     Room:
                         is_bundle: false
                         type: annotation
-                        dir: '%kernel.project_dir%/src/Reservation/Entity'
+                        dir: '%kernel.project_dir%/src/Reservation/Domain/Entity'
                         prefix: App\Reservation\Entity

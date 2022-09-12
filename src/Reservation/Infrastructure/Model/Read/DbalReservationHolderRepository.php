@@ -5,16 +5,14 @@ declare(strict_types=1);
 namespace App\Reservation\Infrastructure\Model\Read;
 
 use Doctrine\DBAL\Connection;
-use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Application\Dto\ReservationHolder;
 use App\Reservation\Application\Factory\ReservationFactory;
-use App\Reservation\Application\Model\Read\ReservationHolderInterface;
+use App\Reservation\Domain\Model\Read\ReservationHolderInterface;
 use App\Shared\Application\Exception\InfrastructureException;
-use App\Shared\Application\Exception\NotFoundException;
 use App\Shared\Application\ValueObject\Pagination;
 use Throwable;
 
-class DbalReservationHolders implements ReservationHolderInterface
+class DbalReservationHolderRepository implements ReservationHolderInterface
 {
     public function __construct(private Connection $connection, private ReservationFactory $factory) {}
 

@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ReservationHolderControllerTest extends WebTestCase
 {
-
     private KernelBrowser $client;
 
     protected function setUp(): void

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Reservation\Application\Controller\Command\Handler;
 
-use App\Reservation\Application\Model\Write\ReservationWriteInterface;
+use App\Reservation\Domain\Model\Write\ReservationWriteInterface;
 use App\Reservation\Application\Controller\Command\UpdateReservationCommand;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 

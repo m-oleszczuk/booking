@@ -5,7 +5,7 @@ namespace Reservation\Application\Controller\Query\Handler;
 use App\Reservation\Application\Controller\Query\Handler\ReservationHoldersQueryHandler;
 use App\Reservation\Application\Controller\Query\ReservationHoldersQuery;
 use App\Reservation\Application\Dto\ReservationHolder;
-use App\Reservation\Application\Model\Read\ReservationHolderInterface;
+use App\Reservation\Domain\Model\Read\ReservationHolderInterface;
 use App\Shared\Application\ValueObject\Pagination;
 use Faker\Factory;
 use Mockery;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Reservation\Application\Controller\Query\Handler;
 
 use App\Reservation\Application\Controller\Query\ReservationsQuery;
-use App\Reservation\Application\Model\Read\ReservationInterface;
+use App\Reservation\Domain\Model\Read\ReservationInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 class ReservationsQueryHandler implements MessageHandlerInterface

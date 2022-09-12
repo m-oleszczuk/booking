@@ -7,7 +7,7 @@ use App\Reservation\Application\Controller\Command\UpdateReservationCommand;
 use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Application\Dto\ReservationHolder;
 use App\Reservation\Application\Dto\Room;
-use App\Reservation\Application\Model\Write\ReservationWriteInterface;
+use App\Reservation\Domain\Model\Write\ReservationWriteInterface;
 use Faker\Factory;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;

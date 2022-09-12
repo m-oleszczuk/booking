@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Reservation\Application\Model\Read;
+namespace App\Reservation\Domain\Model\Read;
 
-use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Application\Dto\ReservationHolder;
 use App\Shared\Application\ValueObject\Pagination;
 

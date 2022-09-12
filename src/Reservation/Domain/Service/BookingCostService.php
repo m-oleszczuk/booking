@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App\Reservation\Domain\Service;
 
+use DateInterval;
+use DatePeriod;
 use DateTimeImmutable;
+use App\Reservation\Domain\Model\Read\PricingInterface;
 
 /**
  * Very simple class used for setting the cost and maintaining the logic. Could be extracted and improved
@@ -13,20 +16,24 @@ use DateTimeImmutable;
  */
 class BookingCostService
 {
-    private const PREMIUM_FACTOR = 1.1;
-    private const BASE_COST = 5000; // cost in cents
+    private float $factor = 1.0;
+    private int $cost = 5000;
+
+    public function __construct(private PricingInterface $pricingRepository) {}
 
     public function bookingCost(bool $isRoomPremium, DateTimeImmutable $startDate, DateTimeImmutable $endDate): int {
-        $numberOfDays = $this->numberOfDays($startDate, $endDate);
-
-        return (int)($numberOfDays * ($isRoomPremium ? $this->premiumCostPercentage() : self::BASE_COST));
+        return $this->calculateCost($isRoomPremium, $startDate, $endDate);
     }
 
-    private function premiumCostPercentage(): float {
-        return self::BASE_COST * self::PREMIUM_FACTOR;
-    }
+    private function calculateCost(bool $isRoomPremium, DateTimeImmutable $startDate, DateTimeImmutable $endDate): int {
+        $interval = DateInterval::createFromDateString('1 day');
+        $period = new DatePeriod($startDate, $interval, $endDate);
+        $totalCost = 0;
 
-    private function numberOfDays(DateTimeImmutable $startDate, DateTimeImmutable $endDate): int {
-        return $startDate->diff($endDate)->d;
+        foreach ($period as $date) {
+            $pricingSettings = $this->pricingRepository->getPricingSettingsForDate($date);
+            $totalCost += (int)($pricingSettings->cost * ($isRoomPremium ? $pricingSettings->factor : 1));
+        }
+        return $totalCost;
     }
 }

@@ -7,13 +7,13 @@ namespace App\Reservation\Infrastructure\Model\Read;
 use Doctrine\DBAL\Connection;
 use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Application\Factory\ReservationFactory;
-use App\Reservation\Application\Model\Read\ReservationInterface;
+use App\Reservation\Domain\Model\Read\ReservationInterface;
 use App\Shared\Application\Exception\InfrastructureException;
 use App\Shared\Application\Exception\NotFoundException;
 use App\Shared\Application\ValueObject\Pagination;
 use Throwable;
 
-class DbalReservations implements ReservationInterface
+class DbalReservationRepository implements ReservationInterface
 {
     public function __construct(private Connection $connection, private ReservationFactory $factory) {}
 

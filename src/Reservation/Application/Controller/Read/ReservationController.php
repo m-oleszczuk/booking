@@ -6,7 +6,7 @@ namespace App\Reservation\Application\Controller\Read;
 
 use App\Reservation\Application\Controller\Query\ReservationQuery;
 use App\Reservation\Application\Controller\Query\ReservationsQuery;
-use App\Reservation\Entity\Reservation;
+use App\Reservation\Domain\Entity\Reservation;
 use App\Shared\Application\Controller\ApiController;
 use App\Shared\Application\Exception\PaginationException;
 use App\Shared\Application\ValueObject\Pagination;

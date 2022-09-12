@@ -8,7 +8,6 @@ use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Application\Dto\ReservationHolder;
 use App\Reservation\Application\Dto\Room;
 use App\Reservation\Application\Factory\ReservationFactory;
-use Faker\Factory;
 use PHPUnit\Framework\TestCase;
 
 class ReservationFactoryTest extends TestCase

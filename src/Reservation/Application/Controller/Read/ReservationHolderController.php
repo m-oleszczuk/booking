@@ -27,18 +27,4 @@ class ReservationHolderController extends ApiController
             'data' => $reservationHolders
         ]);
     }
-
-    /** @throws Throwable */
-    public function reservationsForHolderAction(int $reservationHolderId): JsonResponse
-    {
-        $reservations = $this->queryBus->query(
-            new ReservationsForHolderQuery(
-                $reservationHolderId
-            )
-        );
-
-        return new JsonResponse([
-            'data' => $reservations
-        ]);
-    }
 }

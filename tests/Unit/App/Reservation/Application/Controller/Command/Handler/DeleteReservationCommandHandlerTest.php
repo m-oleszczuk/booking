@@ -4,7 +4,7 @@ namespace Reservation\Application\Controller\Command\Handler;
 
 use App\Reservation\Application\Controller\Command\DeleteReservationCommand;
 use App\Reservation\Application\Controller\Command\Handler\DeleteReservationCommandHandler;
-use App\Reservation\Application\Model\Write\ReservationWriteInterface;
+use App\Reservation\Domain\Model\Write\ReservationWriteInterface;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;

@@ -2,9 +2,9 @@
 
 namespace App\DataFixtures;
 
-use App\Reservation\Entity\Holder;
-use App\Reservation\Entity\Reservation;
-use App\Reservation\Entity\Room;
+use App\Reservation\Domain\Entity\Holder;
+use App\Reservation\Domain\Entity\Reservation;
+use App\Reservation\Domain\Entity\Room;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 

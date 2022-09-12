@@ -7,7 +7,7 @@ use App\Reservation\Application\Controller\Query\ReservationsQuery;
 use App\Reservation\Application\Dto\Reservation;
 use App\Reservation\Application\Dto\ReservationHolder;
 use App\Reservation\Application\Dto\Room;
-use App\Reservation\Application\Model\Read\ReservationInterface;
+use App\Reservation\Domain\Model\Read\ReservationInterface;
 use App\Shared\Application\ValueObject\Pagination;
 use Faker\Factory;
 use Mockery;

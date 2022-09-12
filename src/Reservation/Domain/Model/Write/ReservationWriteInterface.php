@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Reservation\Application\Model\Write;
+namespace App\Reservation\Domain\Model\Write;
 
 use App\Reservation\Application\Dto\Reservation;
 
