@@ -26,11 +26,23 @@ class Reservation
 
     /** @throws Exception */
     private function setStartDate(string $startDate): void {
-        $this->startDate = new DateTimeImmutable($startDate);
+        $today = date("Y-m-d");
+
+        if ($startDate > $today) {
+            $this->startDate = new DateTimeImmutable($startDate);
+        } else {
+            throw ReservationDateException::startDateLessThanToday($startDate);
+        }
     }
 
     /** @throws Exception */
     private function setEndDate(string $endDate): void {
-        $this->endDate = new DateTimeImmutable($endDate);
+        $today = date("Y-m-d");
+
+        if ($endDate > $today && $endDate > $this->startDate) {
+            $this->endDate = new DateTimeImmutable($endDate);
+        } else {
+            throw ReservationDateException::erroneousEndDate($endDate);
+        }
     }
 }
