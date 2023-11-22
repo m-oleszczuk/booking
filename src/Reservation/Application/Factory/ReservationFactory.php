@@ -14,7 +14,7 @@ use App\Reservation\Application\Dto\RoomReservation;
 class ReservationFactory
 {
     /** @throws Exception */
-    public function createReservation($data): Reservation {
+    public function createReservation(array $data): Reservation {
         return (
             new Reservation(
                 $data['confirmed'],
