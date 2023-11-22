@@ -31,7 +31,7 @@ class Reservation
         if ($startDate > $today) {
             $this->startDate = new DateTimeImmutable($startDate);
         } else {
-            throw ReservationDateException::startDateLessThanToday($startDate);
+            throw new Exception(sprintf('Start date %s has to be a later date than today.', $startDate));
         }
     }
 
@@ -42,7 +42,7 @@ class Reservation
         if ($endDate > $today && $endDate > $this->startDate) {
             $this->endDate = new DateTimeImmutable($endDate);
         } else {
-            throw ReservationDateException::erroneousEndDate($endDate);
+            throw new Exception(sprintf('End date %s has to be a later date than today or the start date %s.', $startDate, $this->endDate));
         }
     }
 }
